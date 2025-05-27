@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./favicon/icons8-lista-de-tareas-16.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="modals.css" />
+    <link rel="stylesheet" href="animations.css" />
+    <title>TODO_LIST</title>
+  </head>
+  <body>
+    <!-- div principal -->
+    <div class="root" id="root">
+      <!-- boton para agregar tarea -->
+      <button class="add" id="add">+</button>
+      <!--ventana modal para crear una nueva tarea -->
+      <div class="modal_add" id="modal_add">
+        <!-- formulario para crear una tarea nueva -->
+        <form class="form_add" id="form_add">
+          <h2 class="form_add_title">Crear tarea</h2>
+          <label for="input_task_name" class="name_label">Nombre</label>
+          <input
+            type="text"
+            placeholder="Nombre"
+            class="input_task_name"
+            id="input_task_name"
+          />
+
+          <label for="input_task_time" class="time_label">Hora</label>
+          <input
+            type="time"
+            value="00:00"
+            id="input_task_time"
+            class="input_task_time"
+          />
+
+          <label for="input_task_priority" class="priority_label"
+            >Prioridad</label
+          >
+          <input
+            type="number"
+            max="5"
+            value="0"
+            id="input_task_priority"
+            class="input_task_priority"
+          />
+
+          <label for="input_task_desc" class="desc_label">Descripcion</label>
+          <textarea
+            placeholder="Descripcion"
+            id="input_task_desc"
+            class="input_task_desc"
+          ></textarea>
+
+          <button type="submit" class="input_task_save" id="input_task_save">Cancelar</button>
+        </form>
+      </div>
+
+      <!-- ventana modal para actualizar tarea -->
+      <div class="modal_update" id="modal_update">
+        <form class="form_update" id="form_update">
+          <h2 class="form_update_title">editar tarea</h2>
+
+          <label for="update_name" class="update_name_label">Nombre</label>
+          <input type="text" class="update_name" id="update_name" />
+
+          <label for="update_time" class="update_time_label">Hora</label>
+          <input type="time" class="update_time" id="update_time" />
+
+          <label for="update_completed" class="update_completed_label"
+            >Completada</label
+          >
+          <input type="text" class="update_completed" id="update_completed" />
+
+          <label for="update_priority" class="update_priority_label"
+            >Prioridad</label
+          >
+          <input
+            type="number"
+            max="5"
+            id="update_priority"
+            class="update_priority"
+          />
+
+          <label for="update_desc" class="update_desc_label">Descripcion</label>
+          <textarea id="update_desc" class="update_desc"></textarea>
+
+          <button type="submit" class="update_save" id="update_save">Cancelar</button>
+        </form>
+      </div>
+
+      <!-- contenedor de descripcion -->
+      <div class="desc" id="desc">
+        <!-- contenido de la descripcion -->
+        <p class="desc_content" id="desc_content">
+          <!-- Debo barrer el patio para que mi mama no me pegue -->
+        </p>
+      </div>
+      <!-- contenedor de las tasks -->
+      <main class="main" id="main"></main>
+    </div>
+    <script src="Task.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

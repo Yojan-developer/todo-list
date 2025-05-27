@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: #222;
+  overflow-x: hidden;
+  background-color: #ddf9;
+  user-select: none;
+}
+
+input:hover,
+textarea:hover {
+  box-shadow: 0px 7px 10px 0px #0006;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: 0px 7px 10px 0px #0006;
+}
+
+input,
+textarea {
+  transition: all 0.3s;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add {
+  cursor: pointer;
+  position: fixed;
+  top: 90vh;
+  font-size: 50px;
+  border-radius: 100%;
+  padding: 0px 10px;
+  z-index: 10;
+  outline: none;
+  border: none;
+  background-color: lightgreen;
+  border: 1px solid #222;
+  box-shadow: 0px 0px 10px 0px #0007;
+}
+
+.main {
+  box-shadow: 0px 0px 12px 0px #0006;
+  min-height: 100vh;
+  min-width: 45vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(173, 216, 230);
+  border-radius: 10px;
+  box-shadow: 0px 3px 8px 0px #0007;
+  width: 97%;
+  margin: 20px;
+  font-weight: bold;
+}
+
+.task div {
+  margin: 4px;
+}
+
+.task .sec-1 p,
+h2 {
+  justify-self: center;
+  align-self: center;
+}
+
+.task .sec-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* gap: 4px; */
+}
+
+.task .task_time {
+  grid-column: 1 / 2;
+}
+
+.task .task_priority {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.task .task_created_at {
+  grid-row: 1 / 2;
+  grid-column: 3 / 4;
+}
+
+.task img {
+  cursor: pointer;
+}
+
+.desc {
+  width: 18vw;
+  position: absolute;
+  border: 2px solid #000;
+  display: none;
+  z-index: 10;
+  background-color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+/* .task .task_update_icon {
+  border-left: 2px solid #000;
+  padding: 20px;
+} */
+
+.task .sec-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+  /* padding: 20px 0px; */
+  /* border-left: 1px solid #000; */
+}
+
+.task .task_update_icon {
+  border-left: 2px solid #222;
+  padding: 20px 6px;
+}
+
+.task .task_delete_icon {
+  height: 50px;
+  border-left: 2px solid #222;
+  padding: 20px 6px;
+}

@@ -1,0 +1,39 @@
+@keyframes show_add {
+  from {
+    background-color: #0001;
+  }
+
+  to {
+    background-color: #0005;
+  }
+}
+
+@keyframes hide_add {
+  from {
+    background-color: #0005;
+  }
+
+  to {
+    background-color: #0001;
+  }
+}
+
+@keyframes show_update {
+    from {
+        background-color: #0001;
+    }
+
+    to {
+        background-color: #0005;
+    }
+}
+
+@keyframes hide_update {
+    from {
+        background-color: #0004;
+    }
+
+    to {
+        background-color: #0001;
+    }
+}
